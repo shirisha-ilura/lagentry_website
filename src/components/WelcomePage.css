@@ -23,7 +23,7 @@
   border-radius: 25px;
   padding: 8px 20px;
   margin-bottom: 2rem;
-  animation: slideInLeft 0.8s ease-out;
+  animation: slideInFromBottomLeft 0.8s ease-out;
   text-align: center;
 }
 
@@ -36,7 +36,7 @@
 
 .main-heading {
   margin-bottom: 1rem;
-  animation: slideInLeft 0.8s ease-out 0.2s both;
+  animation: slideInFromBottomLeft 0.8s ease-out 0.2s both;
   text-align: center;
 }
 
@@ -61,6 +61,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  animation: slideInFromBottomLeft 0.8s ease-out 0.4s both;
 }
 
 .animated-text-line {
@@ -120,7 +121,7 @@
   background-clip: text;
   margin-bottom: 3rem;
   max-width: 500px;
-  animation: slideInLeft 0.8s ease-out 0.4s both;
+  animation: slideInFromBottomLeft 0.8s ease-out 0.6s both;
   text-align: center;
 }
 
@@ -138,7 +139,7 @@
   align-items: center;
   gap: 8px;
   transition: all 0.3s ease;
-  animation: slideInLeft 0.8s ease-out 0.6s both;
+  animation: slideInFromBottomLeft 0.8s ease-out 0.8s both;
   text-align: center;
 }
 
@@ -160,7 +161,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: slideInLeft 0.8s ease-out 0.6s both;
+  animation: slideInFromBottomLeft 0.8s ease-out 0.8s both;
 }
 
 .animation-space {
@@ -192,6 +193,28 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromBottomLeft {
+  from {
+    opacity: 0;
+    transform: translate(-50px, 50px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
