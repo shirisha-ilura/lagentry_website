@@ -3,6 +3,7 @@ import './Navigation.css';
 
 const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +15,10 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <nav className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
@@ -21,16 +26,11 @@ const Navigation: React.FC = () => {
         <div className="nav-left">
           {/* Logo */}
           <div className="logo">
-            <div className="logo-icon">
-              <div className="crescent-top"></div>
-              <div className="center-line"></div>
-              <div className="crescent-bottom"></div>
-            </div>
             <span className="hello-text">Lagentry</span>
           </div>
 
-          {/* Navigation Menu */}
-          <div className="nav-menu">
+          {/* Desktop Navigation Menu */}
+          <div className="nav-menu desktop-menu">
             <div className="nav-item">
               AI Agents
               <span className="chevron">▼</span>
@@ -57,8 +57,8 @@ const Navigation: React.FC = () => {
           </div>
         </div>
 
-        {/* Right Side Buttons */}
-        <div className="nav-actions">
+        {/* Desktop Right Side Buttons */}
+        <div className="nav-actions desktop-actions">
           <div className="sign-in">
             <span className="user-icon">👤</span>
             Sign in
@@ -66,6 +66,53 @@ const Navigation: React.FC = () => {
           <button className="demo-button">
             Schedule demo
           </button>
+        </div>
+
+        {/* Mobile Hamburger Menu */}
+        <div className="mobile-menu-toggle" onClick={toggleMobileMenu}>
+          <div className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Dropdown Menu */}
+      <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
+        <div className="mobile-menu-content">
+          <div className="mobile-nav-item">
+            AI Agents
+            <span className="chevron">▼</span>
+          </div>
+          <div className="mobile-nav-item">
+            Product
+            <span className="chevron">▼</span>
+          </div>
+          <div className="mobile-nav-item">
+            Services
+            <span className="chevron">▼</span>
+          </div>
+          <div className="mobile-nav-item">
+            Company
+            <span className="chevron">▼</span>
+          </div>
+          <div className="mobile-nav-item">
+            Resources
+            <span className="chevron">▼</span>
+          </div>
+          <div className="mobile-nav-item">
+            Pricing
+          </div>
+          <div className="mobile-nav-item">
+            <span className="user-icon">👤</span>
+            Sign in
+          </div>
+          <div className="mobile-nav-item">
+            <button className="mobile-demo-button">
+              Schedule demo
+            </button>
+          </div>
         </div>
       </div>
     </nav>
