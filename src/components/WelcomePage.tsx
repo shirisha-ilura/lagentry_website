@@ -36,7 +36,10 @@ const WelcomePage: React.FC = () => {
       </div>
       
       <div className="animation-space">
-        {/* Space reserved for animation */}
+        {/* Simple placeholder for animation space */}
+        <div className="placeholder-text">
+          <p>Animation space reserved</p>
+        </div>
       </div>
     </div>
   );

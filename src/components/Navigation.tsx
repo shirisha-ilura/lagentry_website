@@ -4,6 +4,16 @@ import './Navigation.css';
 const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Show navigation after animation completes (5.5 seconds)
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 5500);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,7 +30,7 @@ const Navigation: React.FC = () => {
   };
 
   return (
-    <nav className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
+    <nav className={`navigation ${isScrolled ? 'scrolled' : ''} ${isVisible ? 'visible' : ''}`}>
       <div className="nav-container">
         {/* Left Side Group */}
         <div className="nav-left">
