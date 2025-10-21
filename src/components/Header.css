@@ -39,22 +39,22 @@
   background: 
     linear-gradient(
       135deg,
-      rgba(138, 43, 226, 0.3) 0%,    /* Violet from top-left */
-      rgba(138, 43, 226, 0.2) 20%,   /* Violet fade */
-      rgba(0, 191, 255, 0.1) 40%,   /* Blue transition */
-      rgba(0, 191, 255, 0.3) 60%,   /* Blue */
-      rgba(0, 191, 255, 0.1) 80%,   /* Blue fade */
-      rgba(128, 0, 128, 0.1) 90%,   /* Purple transition */
-      rgba(128, 0, 128, 0.2) 100%   /* Purple to text */
+      rgba(138, 43, 226, 0.4) 0%,    /* Violet from top-left */
+      rgba(138, 43, 226, 0.3) 20%,   /* Violet fade */
+      rgba(0, 191, 255, 0.2) 40%,   /* Blue transition */
+      rgba(0, 191, 255, 0.4) 60%,   /* Blue */
+      rgba(0, 191, 255, 0.2) 80%,   /* Blue fade */
+      rgba(128, 0, 128, 0.2) 90%,   /* Purple transition */
+      rgba(128, 0, 128, 0.3) 100%   /* Purple to text */
     ),
     linear-gradient(
       45deg,
-      rgba(0, 191, 255, 0.3) 0%,    /* Blue from top-right */
-      rgba(0, 191, 255, 0.1) 30%,   /* Blue fade */
-      rgba(128, 0, 128, 0.1) 50%,   /* Purple transition */
-      rgba(128, 0, 128, 0.2) 70%,   /* Purple */
-      rgba(128, 0, 128, 0.1) 90%,   /* Purple fade */
-      rgba(138, 43, 226, 0.1) 100%  /* Violet blend */
+      rgba(0, 191, 255, 0.4) 0%,    /* Blue from top-right */
+      rgba(0, 191, 255, 0.2) 30%,   /* Blue fade */
+      rgba(128, 0, 128, 0.2) 50%,   /* Purple transition */
+      rgba(128, 0, 128, 0.3) 70%,   /* Purple */
+      rgba(128, 0, 128, 0.2) 90%,   /* Purple fade */
+      rgba(138, 43, 226, 0.2) 100%  /* Violet blend */
     );
   opacity: 0;
   transition: opacity 2s ease-in-out;
@@ -72,22 +72,22 @@
     background: 
       linear-gradient(
         135deg,
-        rgba(138, 43, 226, 0.3) 0%,    /* Violet from top-left */
-        rgba(138, 43, 226, 0.2) 20%,   /* Violet fade */
-        rgba(0, 191, 255, 0.1) 40%,   /* Blue transition */
-        rgba(0, 191, 255, 0.3) 60%,   /* Blue */
-        rgba(0, 191, 255, 0.1) 80%,   /* Blue fade */
-        rgba(128, 0, 128, 0.1) 90%,   /* Purple transition */
-        rgba(128, 0, 128, 0.2) 100%   /* Purple to text */
+        rgba(138, 43, 226, 0.4) 0%,    /* Violet from top-left */
+        rgba(138, 43, 226, 0.3) 20%,   /* Violet fade */
+        rgba(0, 191, 255, 0.2) 40%,   /* Blue transition */
+        rgba(0, 191, 255, 0.4) 60%,   /* Blue */
+        rgba(0, 191, 255, 0.2) 80%,   /* Blue fade */
+        rgba(128, 0, 128, 0.2) 90%,   /* Purple transition */
+        rgba(128, 0, 128, 0.3) 100%   /* Purple to text */
       ),
       linear-gradient(
         45deg,
-        rgba(0, 191, 255, 0.3) 0%,    /* Blue from top-right */
-        rgba(0, 191, 255, 0.1) 30%,   /* Blue fade */
-        rgba(128, 0, 128, 0.1) 50%,   /* Purple transition */
-        rgba(128, 0, 128, 0.2) 70%,   /* Purple */
-        rgba(128, 0, 128, 0.1) 90%,   /* Purple fade */
-        rgba(138, 43, 226, 0.1) 100%  /* Violet blend */
+        rgba(0, 191, 255, 0.4) 0%,    /* Blue from top-right */
+        rgba(0, 191, 255, 0.2) 30%,   /* Blue fade */
+        rgba(128, 0, 128, 0.2) 50%,   /* Purple transition */
+        rgba(128, 0, 128, 0.3) 70%,   /* Purple */
+        rgba(128, 0, 128, 0.2) 90%,   /* Purple fade */
+        rgba(138, 43, 226, 0.2) 100%  /* Violet blend */
       );
   }
   50% {
