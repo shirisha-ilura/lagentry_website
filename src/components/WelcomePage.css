@@ -174,19 +174,21 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
-  border: 1px solid #333333;
 }
 
-.placeholder-text {
-  text-align: center;
+.animation-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.placeholder-text p {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: #666666;
-  margin: 0;
+.animation-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.9) contrast(1.1);
 }
 
 @keyframes slideInLeft {

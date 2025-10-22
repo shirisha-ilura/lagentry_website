@@ -36,9 +36,14 @@ const WelcomePage: React.FC = () => {
       </div>
       
       <div className="animation-space">
-        {/* Simple placeholder for animation space */}
-        <div className="placeholder-text">
-          <p>Animation space reserved</p>
+        <div className="animation-video">
+          <video
+            src="/videos/one.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
         </div>
       </div>
     </div>

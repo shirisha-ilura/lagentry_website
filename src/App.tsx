@@ -3,6 +3,7 @@ import './App.css';
 import Navigation from './components/Navigation';
 import Header from './components/Header';
 import WelcomePage from './components/WelcomePage';
+import Templates from './components/Templates';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
@@ -11,6 +12,7 @@ const App: React.FC = () => {
       <Navigation />
       <Header />
       <WelcomePage />
+      <Templates />
       <Footer />
     </div>
   );
