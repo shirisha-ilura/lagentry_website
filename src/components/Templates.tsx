@@ -55,7 +55,7 @@ const Templates: React.FC = () => {
       id: 'property-management',
       name: 'Property Management',
       role: 'Real estate and property management automation',
-      avatar: '/images/one.png',
+      avatar: '/images/seven.png',
       color: '#06B6D4',
       skills: ['Tenant Management', 'Maintenance Tracking', 'Rent Collection', 'Property Analytics']
     },
@@ -63,7 +63,7 @@ const Templates: React.FC = () => {
       id: 'sales',
       name: 'Sales',
       role: 'AI-powered sales automation and lead management',
-      avatar: '/images/two.png',
+      avatar: '/images/eight.png',
       color: '#84CC16',
       skills: ['Lead Generation', 'Sales Pipeline', 'CRM Integration', 'Follow-up Automation']
     }
