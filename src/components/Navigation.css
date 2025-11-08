@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #000000;
+  border-bottom: 1px solid #333333;
+  z-index: 1000;
+  padding: 0;
+  transition: background-color 0.3s ease;
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.navigation.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 1s ease-in-out;
+}
+
+.navigation.scrolled {
+  background: #2a2a2a;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #444444;
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem 1rem 2rem;
+  height: 70px;
+  width: 100%;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.logo-icon {
+  position: relative;
+  width: 32px;
+  height: 24px;
+}
+
+.crescent-top {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 16px;
+  height: 8px;
+  border: 2px solid #14b8a6;
+  border-bottom: none;
+  border-radius: 16px 16px 0 0;
+  transform: rotate(180deg);
+}
+
+.center-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 32px;
+  height: 2px;
+  background: #14b8a6;
+  transform: translateY(-50%);
+}
+
+.crescent-bottom {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 16px;
+  height: 8px;
+  border: 2px solid #14b8a6;
+  border-top: none;
+  border-radius: 0 0 16px 16px;
+}
+
+
+.hello-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.hello-text:hover {
+  color: #14b8a6;
+}
+
+/* Left Side Group */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex: 0 0 auto;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease;
+}
+
+.nav-item:hover {
+  color: #ffffff;
+}
+
+.nav-icon {
+  font-size: 1rem;
+}
+
+.chevron {
+  font-size: 0.7rem;
+  color: #888888;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover .chevron {
+  transform: rotate(180deg);
+}
+
+/* Right Side Actions */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.sign-in {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease;
+}
+
+.sign-in:hover {
+  color: #14b8a6;
+}
+
+.user-icon {
+  font-size: 1rem;
+}
+
+.demo-button {
+  background: #1a1a1a;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.demo-button::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  background: linear-gradient(45deg, #ffffff, #000000, #ffffff, #000000);
+  background-size: 400% 400%;
+  border-radius: 14px;
+  z-index: -1;
+  animation: borderFlow 3s ease-in-out infinite;
+  box-shadow: 
+    0 0 15px rgba(255, 255, 255, 0.3),
+    0 0 30px rgba(255, 255, 255, 0.2),
+    0 0 45px rgba(255, 255, 255, 0.1);
+}
+
+.demo-button:hover {
+  background: #2a2a2a;
+  transform: translateY(-1px);
+}
+
+.demo-button:hover::before {
+  animation-duration: 1.5s;
+}
+
+@keyframes borderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Mobile Hamburger Menu */
+.mobile-menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 24px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Mobile Dropdown Menu */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #000000;
+  border-top: 1px solid #333333;
+  z-index: 999;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.mobile-menu.open {
+  max-height: 500px;
+}
+
+.mobile-menu-content {
+  padding: 1rem 2rem;
+}
+
+.mobile-nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  border-bottom: 1px solid #333333;
+  cursor: pointer;
+}
+
+.mobile-nav-item:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav-item:hover {
+  color: #ffffff;
+}
+
+.mobile-demo-button {
+  background: #1a1a1a;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.mobile-demo-button:hover {
+  background: #2a2a2a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 1rem 2rem 1rem 2rem;
+    height: 60px;
+    justify-content: space-between;
+  }
+  
+  .desktop-menu {
+    display: none;
+  }
+  
+  .desktop-actions {
+    display: none;
+  }
+  
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  .mobile-menu {
+    display: block;
+  }
+  
+  .nav-left {
+    gap: 0;
+  }
+  
+  .hello-text {
+    font-size: 1.3rem;
+  }
+}
